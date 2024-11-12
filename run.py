@@ -9,6 +9,15 @@ app = Flask(__name__)  #creates an instance of this class and storing in a veria
 def index():           #when we try to browse the root directory, as indicated by the "/", then Flask triggers the index function underneath and returns ....
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 
 if __name__ == "__main__": #if name is equal to main then we are goin to wrap our app with the following arguments
     app.run(
